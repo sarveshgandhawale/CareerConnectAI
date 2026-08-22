@@ -1,0 +1,505 @@
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #fff7f0,
+        #f5f1ff
+    );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px 0;
+}
+
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container {
+    max-width: 1100px;
+}
+
+
+/* ==========================================
+   MAIN CARD
+========================================== */
+
+.card {
+    border: none;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==========================================
+   LEFT PANEL
+========================================== */
+
+.left-panel {
+
+    min-height: 600px;
+
+    padding: 55px 45px;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        #ff6900,
+        #ff8a3d
+    );
+}
+
+
+/* Decorative circle */
+
+.left-panel::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.10);
+
+    top: -100px;
+
+    right: -100px;
+}
+
+
+.left-panel::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+
+    height: 200px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.08);
+
+    bottom: -80px;
+
+    left: -70px;
+}
+
+
+/* ==========================================
+   LOGO / TITLE
+========================================== */
+
+.left-panel h2 {
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.left-panel h2 i {
+
+    margin-right: 8px;
+}
+
+
+.left-panel p {
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    max-width: 330px;
+
+    opacity: 0.92;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ==========================================
+   FEATURES
+========================================== */
+
+.left-features {
+
+    margin-top: 35px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.left-feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+.left-feature i {
+
+    width: 44px;
+
+    height: 44px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.18);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 17px;
+
+    flex-shrink: 0;
+}
+
+
+.left-feature span {
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+/* ==========================================
+   RIGHT PANEL
+========================================== */
+
+.col-lg-7 {
+
+    background: #ffffff;
+}
+
+
+.col-lg-7 .p-4 {
+
+    padding: 45px !important;
+}
+
+
+/* ==========================================
+   LOGIN / REGISTER TITLE
+========================================== */
+
+.col-lg-7 h3 {
+
+    color: #101828;
+
+    font-size: 28px;
+
+    font-weight: 800;
+}
+
+
+.col-lg-7 h3 i {
+
+    color: #ff6900;
+
+    margin-right: 7px;
+}
+
+
+/* ==========================================
+   INPUT FIELDS
+========================================== */
+
+.form-control,
+.form-select {
+
+    min-height: 48px;
+
+    border: 1px solid #d9d9d9;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    padding: 12px 15px;
+
+    transition: 0.25s;
+}
+
+
+.form-control::placeholder {
+
+    color: #98a2b3;
+}
+
+
+.form-control:focus,
+.form-select:focus {
+
+    border-color: #ff6900;
+
+    box-shadow:
+        0 0 0 3px rgba(255,105,0,0.10);
+}
+
+
+/* ==========================================
+   PASSWORD
+========================================== */
+
+.input-group .form-control {
+
+    border-radius: 10px 0 0 10px;
+}
+
+
+.input-group .btn {
+
+    border-radius: 0 10px 10px 0;
+
+    border-color: #d9d9d9;
+
+    color: #667085;
+
+    background: white;
+}
+
+
+.input-group .btn:hover {
+
+    background: #ff6900;
+
+    border-color: #ff6900;
+
+    color: white;
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.btn-primary {
+
+    min-height: 48px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #ff6900;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+.btn-primary:hover {
+
+    background: #e85f00;
+
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(255,105,0,0.20);
+}
+
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a {
+
+    color: #ff6900;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+a:hover {
+
+    color: #e85f00;
+
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   FORGOT PASSWORD
+========================================== */
+
+.text-end a {
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.text-muted {
+
+    color: #667085 !important;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   TEXTAREA
+========================================== */
+
+textarea.form-control {
+
+    resize: none;
+}
+
+
+/* ==========================================
+   MOBILE / TABLET
+========================================== */
+
+@media (max-width: 991px) {
+
+    body {
+
+        padding: 20px;
+    }
+
+    .left-panel {
+
+        min-height: 280px;
+
+        padding: 40px;
+    }
+
+    .left-features {
+
+        display: none;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 576px) {
+
+    body {
+
+        padding: 15px;
+    }
+
+    .card {
+
+        border-radius: 15px;
+    }
+
+    .left-panel {
+
+        min-height: 230px;
+
+        padding: 30px 25px;
+    }
+
+    .left-panel h2 {
+
+        font-size: 24px;
+    }
+
+    .left-panel p {
+
+        font-size: 13px;
+    }
+
+    .col-lg-7 .p-4 {
+
+        padding: 25px !important;
+    }
+
+    .col-lg-7 h3 {
+
+        font-size: 23px;
+    }
+
+    .form-control,
+    .form-select {
+
+        font-size: 12px;
+    }
+
+}

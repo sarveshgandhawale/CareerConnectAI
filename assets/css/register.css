@@ -1,0 +1,398 @@
+/* ==========================================
+   GENERAL
+========================================== */
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #fff1e6,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #f1ebff,
+            transparent 35%
+        );
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px 0;
+}
+
+
+/* ==========================================
+   MAIN CARD
+========================================== */
+
+.card {
+    border: none;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==========================================
+   LEFT PANEL
+========================================== */
+
+.left-panel {
+
+    min-height: 620px;
+
+    padding: 50px 40px;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ff6900,
+            #ff8a3d
+        );
+}
+
+
+/* Decorative circle */
+
+.left-panel::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+
+    height: 260px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.10);
+
+    top: -80px;
+
+    right: -80px;
+}
+
+
+.left-panel::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.08);
+
+    bottom: -60px;
+
+    left: -50px;
+}
+
+
+/* Logo icon */
+
+.left-panel h2 {
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.left-panel h2 i {
+
+    margin-right: 8px;
+}
+
+
+.left-panel p {
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    opacity: .9;
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 330px;
+}
+
+
+/* ==========================================
+   LEFT FEATURES
+========================================== */
+
+.left-features {
+
+    margin-top: 35px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.left-feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 20px;
+}
+
+
+.left-feature i {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,.18);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.left-feature span {
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* ==========================================
+   REGISTER FORM
+========================================== */
+
+.col-lg-7 {
+
+    background: #ffffff;
+}
+
+
+.col-lg-7 .p-4 {
+
+    padding: 40px !important;
+}
+
+
+.col-lg-7 h3 {
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    color: #101828;
+}
+
+
+.col-lg-7 h3 i {
+
+    color: #ff6900;
+
+    margin-right: 7px;
+}
+
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+.form-control,
+.form-select {
+
+    min-height: 48px;
+
+    border-radius: 10px;
+
+    border: 1px solid #d9d9d9;
+
+    font-size: 13px;
+
+    padding-left: 15px;
+
+    transition: .2s;
+}
+
+
+.form-control:focus,
+.form-select:focus {
+
+    border-color: #ff6900;
+
+    box-shadow:
+        0 0 0 3px rgba(255,105,0,.10);
+}
+
+
+/* Password group */
+
+.input-group .form-control {
+
+    border-radius: 10px 0 0 10px;
+}
+
+
+.input-group .btn {
+
+    border-radius: 0 10px 10px 0;
+}
+
+
+/* ==========================================
+   REGISTER BUTTON
+========================================== */
+
+.btn-primary {
+
+    min-height: 48px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #ff6900;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+
+.btn-primary:hover {
+
+    background: #e85f00;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(255,105,0,.20);
+}
+
+
+/* ==========================================
+   LOGIN LINK
+========================================== */
+
+.text-center a {
+
+    color: #ff6900;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.text-center a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 991px) {
+
+    body {
+
+        padding: 20px;
+    }
+
+    .left-panel {
+
+        min-height: 260px;
+
+        padding: 35px;
+    }
+
+    .left-features {
+
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .card {
+
+        border-radius: 16px;
+    }
+
+    .left-panel {
+
+        padding: 30px 25px;
+
+        min-height: 220px;
+    }
+
+    .left-panel h2 {
+
+        font-size: 24px;
+    }
+
+    .col-lg-7 .p-4 {
+
+        padding: 25px !important;
+    }
+
+    .col-lg-7 h3 {
+
+        font-size: 23px;
+    }
+
+}

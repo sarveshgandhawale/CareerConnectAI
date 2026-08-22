@@ -1,0 +1,36 @@
+body{
+    background:#f2f2f2;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.resume{
+    background:#ffffff;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+h2,h3,h5{
+    color:#0d6efd;
+}
+
+hr{
+    border:1px solid #ccc;
+}
+
+@media print{
+
+.no-print{
+    display:none;
+}
+
+body{
+    background:white;
+}
+
+.resume{
+    box-shadow:none;
+    border:none;
+}
+
+}
