@@ -1,19 +1,4 @@
 <?php
-
-$conn = mysqli_connect(
-"localhost",
-"root",
-"",
-"careerconnect"
-);
-
-
-if(!$conn)
-{
-
-die("Database Connection Failed");
-
-}
-
-
+// Root configuration and database connector
+require_once __DIR__ . '/config/db.php';
 ?>

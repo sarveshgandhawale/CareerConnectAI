@@ -1,440 +1,160 @@
 <?php
-include("db.php");
+require_once __DIR__ . '/config/config.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Features | CareerConnect AI</title>
-
-    <!-- Bootstrap -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-    <link rel="stylesheet"
-          href="assets/css/features.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="<?php echo asset('css/nav.css'); ?>">
+    <link rel="stylesheet" href="<?php echo asset('css/footer.css'); ?>">
+    <link rel="stylesheet" href="<?php echo asset('css/features.css'); ?>">
 </head>
-
 <body>
 
+<?php include __DIR__ . '/components/navbar.php'; ?>
 
-<!-- ============================
-     NAVBAR
-============================= -->
-
-<nav class="navbar navbar-expand-lg">
-
-    <div class="container">
-
-        <a class="navbar-brand" href="index.php">
-
-            <i class="fa-solid fa-user-graduate"></i>
-
-            CareerConnect AI
-
-        </a>
-
-
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav">
-
-            <i class="fa-solid fa-bars"></i>
-
-        </button>
-
-
-        <div class="collapse navbar-collapse"
-             id="navbarNav">
-
-            <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                    <a href="index.php"
-                       class="nav-link">
-                        Home
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="about.php"
-                       class="nav-link">
-                        About Us
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="features.php"
-                       class="nav-link active">
-                        Features
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="how-it-work.php"
-                       class="nav-link">
-                        How It Works
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="contact.php"
-                       class="nav-link">
-                        Contact
-                    </a>
-                </li>
-
-                <li class="nav-item ms-lg-3">
-                    <a href="login.php"
-                       class="btn login-btn">
-                        Login
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
-
+<!-- HERO -->
+<section class="features-hero">
+    <div class="hero-badge">
+        <i class="fa-solid fa-sparkles"></i> POWERFUL CAREER MODULES
     </div>
-
-</nav>
-
-
-
-<!-- ============================
-     HERO
-============================= -->
-
-<section class="feature-hero">
-
-    <div class="container">
-
-        <div class="hero-content">
-
-            <span class="badge-custom">
-                <i class="fa-solid fa-sparkles"></i>
-                SMART CAREER PLATFORM
-            </span>
-
-            <h1>
-                Everything You Need
-                <br>
-                <span>To Build Your Career</span>
-            </h1>
-
-            <p>
-                CareerConnect AI brings career guidance,
-                skill development, resume building and
-                interview preparation together in one
-                student-friendly platform.
-            </p>
-
-        </div>
-
-    </div>
-
+    <h1>Everything You Need to <span>Build Your Career.</span></h1>
+    <p>
+        CareerConnect AI brings personalized career guidance, diagnostic assessments, ATS resume scanning, and AI-powered mock interviews into one smart student platform.
+    </p>
 </section>
 
-
-
-<!-- ============================
-     FEATURES
-============================= -->
-
+<!-- FEATURES GRID -->
 <section class="features-section">
-
-    <div class="container">
-
-
-        <div class="section-heading">
-
-            <span>
-                OUR FEATURES
-            </span>
-
-            <h2>
-                One Platform. Multiple Career Tools.
-            </h2>
-
-            <p>
-                Explore powerful tools designed to help
-                students discover, prepare and grow.
-            </p>
-
-        </div>
-
-
-
-        <div class="row g-4">
-
-
-            <!-- FEATURE 1 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="feature-card">
-
-                    <div class="feature-icon orange">
-
-                        <i class="fa-solid fa-compass"></i>
-
-                    </div>
-
-                    <h3>
-                        AI Career Guidance
-                    </h3>
-
-                    <p>
-                        Discover suitable career options
-                        based on your skills, interests,
-                        education and goals.
-                    </p>
-
-                    <a href="career_guidance.php">
-                        Explore Career Guidance
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- FEATURE 2 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="feature-card">
-
-                    <div class="feature-icon blue">
-
-                        <i class="fa-solid fa-file-lines"></i>
-
-                    </div>
-
-                    <h3>
-                        AI Resume Builder
-                    </h3>
-
-                    <p>
-                        Create a professional resume using
-                        structured templates and improve
-                        your resume content.
-                    </p>
-
-                    <a href="resume.php">
-                        Build Your Resume
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- FEATURE 3 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="feature-card">
-
-                    <div class="feature-icon purple">
-
-                        <i class="fa-solid fa-microphone"></i>
-
-                    </div>
-
-                    <h3>
-                        AI Interview Coach
-                    </h3>
-
-                    <p>
-                        Practice HR, technical and
-                        behavioural interviews and receive
-                        instant feedback.
-                    </p>
-
-                    <a href="interview.php">
-                        Practice Interview
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- FEATURE 4 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="feature-card">
-
-                    <div class="feature-icon green">
-
-                        <i class="fa-solid fa-users"></i>
-
-                    </div>
-
-                    <h3>
-                        Student Skill Exchange
-                    </h3>
-
-                    <p>
-                        Connect with classmates to teach,
-                        learn and exchange technical and
-                        professional skills.
-                    </p>
-
-                    <a href="skill_exchange.php">
-                        Explore Skills
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- FEATURE 5 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="feature-card">
-
-                    <div class="feature-icon pink">
-
-                        <i class="fa-solid fa-chart-line"></i>
-
-                    </div>
-
-                    <h3>
-                        Career Progress Tracking
-                    </h3>
-
-                    <p>
-                        Track your learning progress,
-                        interview performance, skills and
-                        career development.
-                    </p>
-
-                    <a href="dashboard.php">
-                        View Progress
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- FEATURE 6 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="feature-card">
-
-                    <div class="feature-icon yellow">
-
-                        <i class="fa-solid fa-book-open"></i>
-
-                    </div>
-
-                    <h3>
-                        Learning Roadmap
-                    </h3>
-
-                    <p>
-                        Get a personalized learning roadmap
-                        with recommended skills, topics and
-                        career preparation steps.
-                    </p>
-
-                    <a href="roadmap.php">
-                        View Roadmap
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
+    <div class="section-heading">
+        <span>OUR FEATURES</span>
+        <h2>Smart Tools for Your Placement Journey</h2>
+        <p>
+            From discovering your core strengths to becoming high-stakes interview ready, CareerConnect AI supports every step of your journey.
+        </p>
     </div>
 
-</section>
-
-
-
-<!-- ============================
-     CTA
-============================= -->
-
-<section class="feature-cta">
-
-    <div class="container">
-
-        <div class="cta-box">
-
-            <div>
-
-                <h2>
-                    Ready to Build Your Career?
-                </h2>
-
-                <p>
-                    Create your account and start your
-                    personalized career journey today.
-                </p>
-
-            </div>
-
-            <a href="register.php"
-               class="btn cta-btn">
-
-                Get Started
-
-                <i class="fa-solid fa-arrow-right"></i>
-
+    <div class="features-grid">
+        <!-- FEATURE 1 -->
+        <div class="feature-card featured-card">
+            <div class="feature-icon purple"><i class="fa-solid fa-robot"></i></div>
+            <div class="feature-number">01</div>
+            <h3>AI Career Guidance</h3>
+            <p>Get personalized recommendations, match scores, and 6-month milestones based on your coding proficiency and degree.</p>
+            <a href="<?php echo url('career/career_guidance.php'); ?>">
+                Explore Guidance <i class="fa-solid fa-arrow-right"></i>
             </a>
-
         </div>
 
-    </div>
+        <!-- FEATURE 2 -->
+        <div class="feature-card">
+            <div class="feature-icon orange"><i class="fa-solid fa-brain"></i></div>
+            <div class="feature-number">02</div>
+            <h3>Skill Diagnostic Test</h3>
+            <p>Evaluate your technical foundations, algorithmic problem solving, and agile communication readiness.</p>
+            <a href="<?php echo url('assessment/assessment.php'); ?>">
+                Take Skill Test <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
 
+        <!-- FEATURE 3 -->
+        <div class="feature-card">
+            <div class="feature-icon blue"><i class="fa-solid fa-route"></i></div>
+            <div class="feature-number">03</div>
+            <h3>Personalized Career Path</h3>
+            <p>Follow a structured roadmap showing tools, libraries, and portfolio projects to master for your target role.</p>
+            <a href="<?php echo url('career_path.php'); ?>">
+                View Career Paths <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- FEATURE 4 -->
+        <div class="feature-card featured-card">
+            <div class="feature-icon red"><i class="fa-solid fa-microphone-lines"></i></div>
+            <div class="feature-number">04</div>
+            <h3>AI Mock Interview Coach</h3>
+            <p>Practice voice and text answers with instant 4-dimension scoring, strengths, improvements, and ideal model answers.</p>
+            <a href="<?php echo url('interview/mock_interview.php'); ?>">
+                Start Interview <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- FEATURE 5 -->
+        <div class="feature-card">
+            <div class="feature-icon green"><i class="fa-solid fa-file-circle-check"></i></div>
+            <div class="feature-number">05</div>
+            <h3>AI ATS Resume Scanner</h3>
+            <p>Upload or create your resume and receive AI keyword suggestions, formatting tips, and ATS compatibility scores.</p>
+            <a href="<?php echo url('resume/resume_analysis.php'); ?>">
+                Scan Resume <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- FEATURE 6 -->
+        <div class="feature-card">
+            <div class="feature-icon pink"><i class="fa-solid fa-circle-question"></i></div>
+            <div class="feature-number">06</div>
+            <h3>Tech Question Bank</h3>
+            <p>Access hundreds of curated technical and HR questions across full-stack web, Python, DSA, and Cloud engineering.</p>
+            <a href="<?php echo url('questions/question_bank.php'); ?>">
+                Question Bank <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- FEATURE 7 -->
+        <div class="feature-card">
+            <div class="feature-icon teal"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="feature-number">07</div>
+            <h3>Student Dashboard</h3>
+            <p>Track test scores, interview performance, ATS resume status, and audit logs from one unified console.</p>
+            <a href="<?php echo url('dashboard/dashboard.php'); ?>">
+                View Dashboard <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- FEATURE 8 -->
+        <div class="feature-card featured-card">
+            <div class="feature-icon yellow"><i class="fa-solid fa-bullseye"></i></div>
+            <div class="feature-number">08</div>
+            <h3>Job Readiness Score</h3>
+            <p>Get holistic readiness ratings to see where you stand in technical aptitude before applying for campus placements.</p>
+            <a href="<?php echo url('dashboard/dashboard.php'); ?>">
+                Check Readiness <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
 </section>
 
+<!-- HOW IT HELPS -->
+<section class="feature-cta">
+    <div class="cta-content">
+        <span>YOUR CAREER. YOUR ROADMAP.</span>
+        <h2>Discover Where You Are &amp; Where You Can Go.</h2>
+        <p>
+            CareerConnect AI combines your skills, interests, resume, and interview performance to give you a clear direction in tech.
+        </p>
+        <a href="<?php echo url('career/career_guidance.php'); ?>">
+            Build My Career Roadmap <i class="fa-solid fa-arrow-right ms-1"></i>
+        </a>
+    </div>
 
+    <div class="cta-visual">
+        <div class="visual-circle"><i class="fa-solid fa-rocket"></i></div>
+        <div class="floating-card card-one"><i class="fa-solid fa-check text-success"></i> Skills Matched</div>
+        <div class="floating-card card-two"><i class="fa-solid fa-chart-line text-primary"></i> Career Progress</div>
+        <div class="floating-card card-three"><i class="fa-solid fa-star text-warning"></i> AI Recommendation</div>
+    </div>
+</section>
 
-<!-- Bootstrap JS -->
-
-<script
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
-
-
+<?php include __DIR__ . '/components/footer.php'; ?>
 </body>
-
 </html>

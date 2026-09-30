@@ -1,0 +1,587 @@
+/* =========================================================
+   CAREERCONNECT AI
+   MODERN FOOTER
+   SCOPED FOOTER CSS
+   This CSS affects ONLY .modern-footer
+========================================================= */
+
+
+/* =========================================================
+   MAIN FOOTER
+========================================================= */
+
+.modern-footer {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 80px;
+
+    background: #0b1120;
+
+    color: #ffffff;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ORANGE GLOW
+========================================================= */
+
+.modern-footer::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    top: -180px;
+    left: 15%;
+
+    background: #ff7a00;
+
+    opacity: 0.08;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   FOOTER MAIN CONTAINER
+========================================================= */
+
+.modern-footer .footer-container {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 65px 30px 50px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1.3fr;
+
+    gap: 50px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.modern-footer .footer-brand {
+
+    max-width: 360px;
+}
+
+
+/* =========================================================
+   BRAND LOGO
+========================================================= */
+
+.modern-footer .brand-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FOOTER LOGO ICON
+
+   IMPORTANT:
+   Scoped with .modern-footer
+   So it will NOT affect navbar logo
+========================================================= */
+
+.modern-footer .brand-logo .logo-icon {
+
+    width: 38px;
+    height: 38px;
+
+    min-width: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #ff7a00;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(255, 122, 0, 0.35);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BRAND LOGO TEXT
+========================================================= */
+
+.modern-footer .brand-logo h2 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+.modern-footer .brand-logo h2 span {
+
+    color: #ff7a00;
+}
+
+
+/* =========================================================
+   BRAND DESCRIPTION
+========================================================= */
+
+.modern-footer .footer-brand > p {
+
+    margin: 20px 0 25px;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   FOOTER BUTTON
+========================================================= */
+
+.modern-footer .footer-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 11px 18px;
+
+    background: #ff7a00;
+
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    box-sizing: border-box;
+}
+
+
+.modern-footer .footer-btn:hover {
+
+    background: #ff8c1a;
+
+    color: #ffffff !important;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(255, 122, 0, 0.25);
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.modern-footer .footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   COLUMN TITLE
+========================================================= */
+
+.modern-footer .footer-column h4 {
+
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   COLUMN LINKS
+========================================================= */
+
+.modern-footer .footer-column a {
+
+    color: #94a3b8 !important;
+
+    text-decoration: none !important;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.modern-footer .footer-column a:hover {
+
+    color: #ff7a00 !important;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   CONTACT COLUMN
+========================================================= */
+
+.modern-footer .contact-column p {
+
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.modern-footer .footer-social {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+
+.modern-footer .footer-social a {
+
+    width: 35px;
+    height: 35px;
+
+    min-width: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #172033;
+
+    border-radius: 8px;
+
+    color: #cbd5e1 !important;
+
+    text-decoration: none !important;
+
+    font-size: 14px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+
+    box-sizing: border-box;
+}
+
+
+.modern-footer .footer-social a:hover {
+
+    background: #ff7a00;
+
+    color: #ffffff !important;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.modern-footer .footer-bottom {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 20px 30px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.modern-footer .footer-bottom p {
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   POLICY LINKS
+========================================================= */
+
+.modern-footer .footer-policy-links {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 25px;
+}
+
+
+.modern-footer .footer-policy-links a {
+
+    color: #64748b !important;
+
+    text-decoration: none !important;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    transition: color 0.3s ease;
+}
+
+
+.modern-footer .footer-policy-links a:hover {
+
+    color: #ff7a00 !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .modern-footer .footer-container {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 40px;
+
+        padding:
+            55px 30px 40px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .modern-footer {
+
+        margin-top: 60px;
+    }
+
+
+    .modern-footer .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding:
+            50px 25px 35px;
+    }
+
+
+    .modern-footer .footer-brand {
+
+        max-width: 100%;
+    }
+
+
+    .modern-footer .footer-column {
+
+        width: 100%;
+    }
+
+
+    /* FOOTER BOTTOM */
+
+    .modern-footer .footer-bottom {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+        padding: 20px;
+    }
+
+
+    .modern-footer .footer-policy-links {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .modern-footer .footer-container {
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+    }
+
+
+    .modern-footer .brand-logo h2 {
+
+        font-size: 20px;
+    }
+
+
+    .modern-footer .footer-brand > p {
+
+        font-size: 13px;
+    }
+
+
+    .modern-footer .footer-bottom p {
+
+        font-size: 11px;
+    }
+
+
+    .modern-footer .footer-policy-links a {
+
+        font-size: 11px;
+    }
+
+}

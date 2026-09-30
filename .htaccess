@@ -1,0 +1,8 @@
+# Protect sensitive files
+<FilesMatch "^\.env|\.git|\.sql$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Prevent directory browsing
+Options -Indexes

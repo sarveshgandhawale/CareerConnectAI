@@ -1,15 +1,17 @@
-console.log("Resume Builder Loaded");
-
-document.querySelector("form").addEventListener("submit", function(e){
-
-let mobile=document.querySelector("input[name='mobile']").value;
-
-if(mobile.length!=10){
-
-alert("Enter a valid 10-digit mobile number.");
-
-e.preventDefault();
-
-}
-
+document.addEventListener("DOMContentLoaded", function () {
+    const resumeForm = document.querySelector("form");
+    if (resumeForm) {
+        resumeForm.addEventListener("submit", function (e) {
+            const mobileInput = resumeForm.querySelector("input[name='mobile']");
+            if (mobileInput) {
+                const mobileVal = mobileInput.value.trim();
+                if (mobileVal.length !== 10 || !/^\d{10}$/.test(mobileVal)) {
+                    alert("Please enter a valid 10-digit mobile number.");
+                    mobileInput.focus();
+                    e.preventDefault();
+                    return false;
+                }
+            }
+        });
+    }
 });

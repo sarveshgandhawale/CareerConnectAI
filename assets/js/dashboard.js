@@ -1,19 +1,11 @@
-console.log("Dashboard Loaded");
-
-const cards=document.querySelectorAll(".dashboard-card");
-
-cards.forEach(card=>{
-
-card.addEventListener("mouseover",function(){
-
-this.style.boxShadow="0 10px 25px rgba(0,0,0,.25)";
-
-});
-
-card.addEventListener("mouseout",function(){
-
-this.style.boxShadow="0 5px 15px rgba(0,0,0,.15)";
-
-});
-
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".dashboard-card");
+    cards.forEach(card => {
+        card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-6px)";
+        });
+        card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0)";
+        });
+    });
 });

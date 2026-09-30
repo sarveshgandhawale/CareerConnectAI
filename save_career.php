@@ -1,72 +1,28 @@
 <?php
+require_once __DIR__ . '/config/db.php';
+requireLogin();
 
-session_start();
+$userId = (int)$_SESSION['user_id'];
+$name = trim($_POST['student_name'] ?? $_SESSION['name'] ?? 'Student');
+$career = trim($_POST['career'] ?? 'Software Developer');
+$score = (int)($_POST['score'] ?? 85);
+$skills = trim($_POST['skills'] ?? 'General Coding');
+$missing = trim($_POST['missing_skills'] ?? 'Advanced System Design');
+$roadmap = trim($_POST['roadmap'] ?? 'Learn fundamentals -> Build projects');
+$aiAdvice = trim($_POST['ai_advice'] ?? 'Keep building and practicing.');
 
-include "config.php";
-
-
-// Get career result data
-
-$name = $_SESSION['name'] ?? "Student";
-
-$career = "Full Stack Developer";
-
-$score = 85;
-
-
-$skills = "HTML, CSS, JavaScript, PHP, MySQL";
-
-
-$missing = "React.js, Node.js, Git, Cloud";
-
-
-$roadmap = "Learn JavaScript, Learn React, Build Projects, Prepare Interview";
-
-
-
-
-// Insert data
-
-$sql = "INSERT INTO career_results
-(student_name, career, score, skills, missing_skills, roadmap)
-
-VALUES
-
-('$name',
-'$career',
-'$score',
-'$skills',
-'$missing',
-'$roadmap')";
-
-
-$result = mysqli_query($conn,$sql);
-
-
-
-if($result)
-{
-
-echo "
-
-<script>
-
-alert('Career Result Saved Successfully');
-
-window.location='career_result.php';
-
-</script>
-
-";
-
+$stmt = mysqli_prepare($conn, "INSERT INTO career_results (user_id, student_name, career, score, skills, missing_skills, roadmap, ai_advice) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+if ($stmt) {
+    mysqli_stmt_bind_param($stmt, "ississss", $userId, $name, $career, $score, $skills, $missing, $roadmap, $aiAdvice);
+    if (mysqli_stmt_execute($stmt)) {
+        mysqli_stmt_close($stmt);
+        logActivity($conn, $userId, 'Save Career', 'Career', "Saved career assessment for {$career}.");
+        header("Location: " . url('view_career_history.php?success=' . urlencode("Career assessment saved successfully!")));
+        exit();
+    }
+    mysqli_stmt_close($stmt);
 }
 
-else
-{
-
-echo "Error : ".mysqli_error($conn);
-
-}
-
-
+header("Location: " . url('view_career_history.php?error=' . urlencode("Could not save assessment.")));
+exit();
 ?>

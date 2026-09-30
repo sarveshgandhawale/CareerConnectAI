@@ -1,19 +1,12 @@
-// Page Loaded
-console.log("Update Profile Loaded");
+function validateForm() {
+    const mobileElem = document.getElementById("mobile");
+    if (!mobileElem) return true;
 
-// Mobile Validation
-function validateForm(){
-
-let mobile=document.getElementById("mobile").value;
-
-if(mobile.length!=10){
-
-alert("Please Enter Valid Mobile Number");
-
-return false;
-
-}
-
-return true;
-
+    const mobile = mobileElem.value.trim();
+    if (mobile.length !== 10 || !/^\d{10}$/.test(mobile)) {
+        alert("Please enter a valid 10-digit mobile number.");
+        mobileElem.focus();
+        return false;
+    }
+    return true;
 }

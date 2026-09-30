@@ -1,54 +1,38 @@
 function showPassword() {
-
-    let pass = document.getElementById("password");
-
-    if (pass.type == "password") {
-
-        pass.type = "text";
-
-    } else {
-
-        pass.type = "password";
-
+    const pass = document.getElementById("password");
+    if (pass) {
+        pass.type = pass.type === "password" ? "text" : "password";
     }
-
 }
 
-
 function validateForm() {
+    const passElem = document.getElementById("password");
+    const confirmElem = document.getElementById("confirm_password");
+    const mobileElem = document.getElementById("mobile");
 
-    let pass =
-        document.getElementById("password").value;
+    if (!passElem || !confirmElem || !mobileElem) return true;
 
-    let confirm =
-        document.getElementById("confirm_password").value;
+    const pass = passElem.value;
+    const confirm = confirmElem.value;
+    const mobile = mobileElem.value.trim();
 
-    let mobile =
-        document.getElementById("mobile").value;
-
-
-    // Check mobile number
-
-    if (mobile.length != 10) {
-
-        alert("Enter 10 digit mobile number");
-
+    if (mobile.length !== 10 || !/^\d{10}$/.test(mobile)) {
+        alert("Please enter a valid 10-digit mobile number.");
+        mobileElem.focus();
         return false;
-
     }
 
-
-    // Check password
-
-    if (pass != confirm) {
-
-        alert("Passwords do not match");
-
+    if (pass !== confirm) {
+        alert("Passwords do not match.");
+        confirmElem.focus();
         return false;
-
     }
 
+    if (pass.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        passElem.focus();
+        return false;
+    }
 
     return true;
-
 }

@@ -1,14 +1,6 @@
-function showPassword(){
-
-let pass=document.getElementById("password");
-
-if(pass.type==="password")
-{
-pass.type="text";
-}
-else
-{
-pass.type="password";
-}
-
+function showPassword() {
+    const pass = document.getElementById("password");
+    if (pass) {
+        pass.type = pass.type === "password" ? "text" : "password";
+    }
 }

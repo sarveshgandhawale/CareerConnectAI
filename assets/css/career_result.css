@@ -128,3 +128,49 @@ li{
     background:#e66a00;
 
 }
+
+
+.ai-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 28px;
+    margin-top: 25px;
+    background: #ffffff;
+}
+
+.ai-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.ai-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff3e8;
+    border-radius: 14px;
+    font-size: 24px;
+}
+
+.ai-title h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.ai-title p {
+    margin: 5px 0 0;
+    color: #667085;
+    font-size: 14px;
+}
+
+.ai-response {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 20px;
+    line-height: 1.8;
+    color: #344054;
+}
